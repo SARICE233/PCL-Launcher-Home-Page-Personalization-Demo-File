@@ -65,12 +65,12 @@
                             ToolTip="测测今天运气如何！" />
             </StackPanel>
 
-            <!-- 第四行：帮助入口 -->
+            <!-- 第四行：社区 Wiki -->
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <local:MyTextButton Margin="0,0,0,0" HorizontalAlignment="Center"
-                            Text="📖 PCL 帮助文档" EventType="打开帮助"
-                            EventData="帮助/自定义帮助.json"
-                            ToolTip="打开 PCL 帮助文档" />
+                            Text="📖 社区 Wiki" EventType="打开网页"
+                            EventData="https://wtumc.fun/wiki"
+                            ToolTip="打开 WTU-MC 社区 Wiki 文档" />
             </StackPanel>
         </StackPanel>
     </local:MyCard>

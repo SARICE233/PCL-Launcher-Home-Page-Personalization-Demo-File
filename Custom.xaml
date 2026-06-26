@@ -1,0 +1,257 @@
+<!--
+  武汉纺织大学 Minecraft 社区 × PCL2 自定义主页
+  WTU-MC Community · wtumc.fun
+
+  → 设置 → 个性化 → 主页 → 读取本地文件 → 选择此文件
+  出问题直接删掉这个文件即可恢复默认。
+-->
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- 服务器卡片 — 最核心的信息放最前面 -->
+<!-- ═══════════════════════════════════════════════════════ -->
+    <local:MyCard Title="武汉纺织大学 Minecraft 社区" Margin="0,0,0,12">
+        <StackPanel Margin="25,30,23,18">
+            <!-- 标语 -->
+            <TextBlock TextWrapping="Wrap" Margin="0,0,0,6" HorizontalAlignment="Center"
+                       FontSize="14" Foreground="{DynamicResource ColorBrush5}"
+                       Text="像素之外 / 无限之境" />
+            <TextBlock TextWrapping="Wrap" Margin="0,0,0,14" HorizontalAlignment="Center"
+                       FontSize="11" Foreground="{DynamicResource ColorBrush3}"
+                       Text="在指尖上织就世界，在虚拟中纵横经纬" />
+
+            <!-- 主服务器按钮行 -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
+                <local:MyButton Margin="0,0,10,0" Width="155" Height="38" ColorType="Highlight"
+                            Text="🎮 加入 (Fabric)" EventType="启动游戏"
+                            EventData="1.21.1-Fabric|mc.wtumc.fun"
+                            ToolTip="使用本地 1.21.1-Fabric 直连服务器" />
+                <local:MyButton Margin="0,0,10,0" Width="155" Height="38"
+                            Text="⚙ 加入 (Forge)" EventType="启动游戏"
+                            EventData="1.21.1-Forge|mc.wtumc.fun"
+                            ToolTip="使用本地 1.21.1-Forge 直连服务器" />
+                <local:MyButton Width="155" Height="38"
+                            Text="📋 复制地址" EventType="复制文本"
+                            EventData="mc.wtumc.fun"
+                            ToolTip="复制服务器 IP 到剪贴板" />
+            </StackPanel>
+
+            <!-- 服务器地址 — 原版纯净服 -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <local:MyTextButton Margin="0,0,0,0" HorizontalAlignment="Center"
+                            Text="服务器地址：mc.wtumc.fun（点击复制）" EventType="复制文本"
+                            EventData="mc.wtumc.fun"
+                            ToolTip="点击复制服务器地址" />
+            </StackPanel>
+
+            <local:MyHint Margin="0,12,0,0" Theme="Blue"
+                        Text="服务器状态、在线人数、版本信息可在官网 https://wtumc.fun 实时查看" />
+        </StackPanel>
+    </local:MyCard>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- PCL 本机功能 — 优先级第二，启动器自带实用功能 -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <local:MyCard Title="本机功能" Margin="0,0,0,12">
+        <StackPanel Margin="25,30,23,18">
+            <!-- 第一行：核心维护 -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
+                <local:MyButton Margin="0,0,10,0" Width="155" Height="35" ColorType="Highlight"
+                            Text="🧹 清理垃圾" EventType="清理垃圾"
+                            ToolTip="清理 Minecraft 日志与缓存文件" />
+                <local:MyButton Margin="0,0,10,0" Width="155" Height="35"
+                            Text="⚡ 内存优化" EventType="内存优化"
+                            ToolTip="一键优化 JVM 内存参数" />
+                <local:MyButton Width="155" Height="35" ColorType="Red"
+                            Text="🔄 刷新主页" EventType="刷新页面"
+                            ToolTip="重新加载自定义主页" />
+            </StackPanel>
+
+            <!-- 第二行：启动基岩版 — 通过 minecraft:// 协议唤起（方案来源：MFN233 主页 / PCL Discussion #3636） -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
+                <local:MyButton Width="240" Height="38" ColorType="Highlight"
+                            Text="🪨 启动 Minecraft 基岩版" EventType="打开网页"
+                            EventData="minecraft://"
+                            ToolTip="通过 URL Scheme 唤起本机已安装的基岩版 Minecraft" />
+            </StackPanel>
+
+            <!-- 第三行：今日人品 → 弹出窗口展示（PCL 无原生随机，此处为趣味弹窗） -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
+                <local:MyButton Width="240" Height="38"
+                            Text="🎲 今日人品" EventType="弹出窗口"
+                            EventData="今日人品|🤔 嘶……网络卡了，人品暂时测不出来。&#xA;&#xA;💡 要不你先去论坛发个帖攒攒人品？&#xA;   → https://wtumc.fun/forum"
+                            ToolTip="看看今天运气如何（开玩笑的）" />
+            </StackPanel>
+
+            <!-- 第四行：快捷目录 -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
+                <local:MyButton Margin="0,0,10,0" Width="115" Height="33"
+                            Text="📁 .minecraft" EventType="打开文件"
+                            EventData="explorer.exe|.minecraft"
+                            ToolTip="打开 .minecraft 文件夹" />
+                <local:MyButton Margin="0,0,10,0" Width="115" Height="33"
+                            Text="📂 versions" EventType="打开文件"
+                            EventData="explorer.exe|.minecraft\versions"
+                            ToolTip="打开版本文件夹" />
+                <local:MyButton Margin="0,0,10,0" Width="115" Height="33"
+                            Text="📦 mods" EventType="打开文件"
+                            EventData="explorer.exe|.minecraft\mods"
+                            ToolTip="打开 Mod 文件夹" />
+                <local:MyButton Width="115" Height="33"
+                            Text="🎯 saves" EventType="打开文件"
+                            EventData="explorer.exe|.minecraft\saves"
+                            ToolTip="打开存档文件夹" />
+            </StackPanel>
+
+            <!-- 第五行：帮助入口 -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <local:MyTextButton Margin="0,0,0,0" HorizontalAlignment="Center"
+                            Text="📖 PCL 帮助文档" EventType="打开帮助"
+                            EventData="帮助/自定义帮助.json"
+                            ToolTip="打开 PCL 帮助文档" />
+            </StackPanel>
+        </StackPanel>
+    </local:MyCard>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- 快捷入口 — 参考 GitHub 案例的横向按钮布局 -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <local:MyCard Title="快捷入口" Margin="0,0,0,12">
+        <StackPanel Margin="25,30,23,18">
+            <!-- 第一行 -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
+                <local:MyButton Margin="0,0,10,0" Width="140" Height="35" ColorType="Highlight"
+                            Text="🌐 社区官网" EventType="打开网页"
+                            EventData="https://wtumc.fun"
+                            ToolTip="打开 WTU-MC 官方网站" />
+                <local:MyButton Margin="0,0,10,0" Width="140" Height="35"
+                            Text="💬 QQ 群" EventType="打开网页"
+                            EventData="https://qm.qq.com/q/mTdePIDrH2"
+                            ToolTip="加入纺大 MC 社区 QQ 群" />
+                <local:MyButton Width="140" Height="35"
+                            Text="📋 社区论坛" EventType="打开网页"
+                            EventData="https://wtumc.fun/forum"
+                            ToolTip="浏览社区论坛" />
+            </StackPanel>
+            <!-- 第二行 -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,0">
+                <local:MyButton Margin="0,0,10,0" Width="140" Height="35"
+                            Text="📦 资源下载" EventType="打开网页"
+                            EventData="https://wtumc.fun/resources"
+                            ToolTip="Mod、光影、材质包等" />
+                <local:MyButton Margin="0,0,10,0" Width="140" Height="35"
+                            Text="🔧 工具箱" EventType="打开网页"
+                            EventData="https://wtumc.fun/tools"
+                            ToolTip="MOTD预览·附魔计算·种子地图" />
+                <local:MyButton Width="140" Height="35" ColorType="Red"
+                            Text="⭐ Star 项目" EventType="打开网页"
+                            EventData="https://github.com/SARICE233/WTUMCweb-1.0-alpha"
+                            ToolTip="去 GitHub 给项目点个 Star！" />
+            </StackPanel>
+        </StackPanel>
+    </local:MyCard>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- 常用工具 — 参考"新功能说明书"风格，贴近启动器日常使用 -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <local:MyCard Title="常用工具" Margin="0,0,0,12" CanSwap="True" IsSwapped="True">
+        <StackPanel Margin="25,30,23,15">
+            <local:MyListItem Margin="-5,2,-5,8"
+                        Logo="https://www.mcmod.cn/favicon.ico"
+                        Title="MC 百科" Info="查合成表、生物图鉴、模组资料——生存必备"
+                        EventType="打开网页" EventData="https://www.mcmod.cn/" Type="Clickable" />
+            <local:MyListItem Margin="-5,2,-5,8"
+                        Logo="https://zh.minecraft.wiki/favicon.ico"
+                        Title="Minecraft Wiki" Info="最权威的 Minecraft 中文维基"
+                        EventType="打开网页" EventData="https://zh.minecraft.wiki/" Type="Clickable" />
+            <local:MyListItem Margin="-5,2,-5,8"
+                        Logo="https://www.curseforge.com/favicon.ico"
+                        Title="CurseForge" Info="最大的 Minecraft 模组与整合包平台"
+                        EventType="打开网页" EventData="https://www.curseforge.com/minecraft" Type="Clickable" />
+            <local:MyListItem Margin="-5,2,-5,8"
+                        Logo="https://modrinth.com/favicon.ico"
+                        Title="Modrinth" Info="轻量开源模组平台，下载速度飞快"
+                        EventType="打开网页" EventData="https://modrinth.com/" Type="Clickable" />
+            <local:MyListItem Margin="-5,2,-5,0"
+                        Logo="https://www.mcbbs.net/favicon.ico"
+                        Title="MCBBS 纪念版" Info="中文 Minecraft 社区——教程、资源、问答"
+                        EventType="打开网页" EventData="https://www.mcbbs.net/" Type="Clickable" />
+        </StackPanel>
+    </local:MyCard>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- 社区功能 — 列表项风格，展开查看详情 -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <local:MyCard Title="社区功能" Margin="0,0,0,12" CanSwap="True" IsSwapped="True">
+        <StackPanel Margin="25,30,23,12">
+            <TextBlock TextWrapping="Wrap" Margin="0,0,0,10" FontSize="12"
+                       Text="WTU-MC 社区为每一位纺大 MC 玩家提供：" />
+
+            <local:MyListItem Margin="-5,2,-5,6"
+                        Logo="https://wtumc.fun/icon.svg"
+                        Title="新闻资讯" Info="社区动态 · 版本更新 · 活动通知"
+                        EventType="打开网页" EventData="https://wtumc.fun/news" Type="Clickable" />
+            <local:MyListItem Margin="-5,2,-5,6"
+                        Logo="https://wtumc.fun/icon.svg"
+                        Title="社区论坛" Info="自由讨论 · 作品展示 · 技术交流 · 提问求助"
+                        EventType="打开网页" EventData="https://wtumc.fun/forum" Type="Clickable" />
+            <local:MyListItem Margin="-5,2,-5,6"
+                        Logo="https://wtumc.fun/icon.svg"
+                        Title="资源中心" Info="Mod · 光影 · 材质包 · 存档 · 数据包——审核后发布"
+                        EventType="打开网页" EventData="https://wtumc.fun/resources" Type="Clickable" />
+            <local:MyListItem Margin="-5,2,-5,6"
+                        Logo="https://wtumc.fun/icon.svg"
+                        Title="工具箱" Info="MOTD 预览 · 附魔计算器 · JSON 文本生成 · 种子地图"
+                        EventType="打开网页" EventData="https://wtumc.fun/tools" Type="Clickable" />
+            <local:MyListItem Margin="-5,2,-5,0"
+                        Logo="https://wtumc.fun/icon.svg"
+                        Title="活动日历" Info="建筑赛 · 速通挑战 · 线下聚会——定期举办"
+                        EventType="打开网页" EventData="https://wtumc.fun/events" Type="Clickable" />
+        </StackPanel>
+    </local:MyCard>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- 联系我们 — 最不重要的放最后，默认折叠 -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <local:MyCard Title="关于 &amp; 联系" Margin="0,0,0,0" CanSwap="True" IsSwapped="True">
+        <StackPanel Margin="25,30,23,18">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,12">
+                <local:MyImage Width="32" Margin="0,0,10,0"
+                           Source="pack://application:,,,/images/Blocks/Grass.png" />
+                <local:MyImage Width="32" Margin="0,0,10,0"
+                           Source="pack://application:,,,/images/Blocks/CommandBlock.png" />
+                <local:MyImage Width="32" Margin="0,0,10,0"
+                           Source="pack://application:,,,/images/Blocks/GoldBlock.png" />
+                <local:MyImage Width="32"
+                           Source="pack://application:,,,/images/Blocks/RedstoneBlock.png" />
+            </StackPanel>
+
+            <TextBlock TextWrapping="Wrap" Margin="0,0,0,6" HorizontalAlignment="Center"
+                       FontSize="12"
+                       Text="武汉纺织大学 Minecraft 社区" />
+            <TextBlock TextWrapping="Wrap" Margin="0,0,0,10" HorizontalAlignment="Center"
+                       FontSize="11" Foreground="{DynamicResource ColorBrush3}"
+                       Text="在方块世界中构建无限可能" />
+
+            <local:MyListItem Margin="-5,2,-5,6"
+                        Logo="https://wtumc.fun/icon.svg"
+                        Title="社区官网" Info="访问 WTU-MC 官方网站"
+                        EventType="打开网页" EventData="https://wtumc.fun" Type="Clickable" />
+            <local:MyListItem Margin="-5,2,-5,6"
+                        Logo="https://www.qq.com/favicon.ico"
+                        Title="QQ 群" Info="加入纺大 MC 社区群聊"
+                        EventType="打开网页" EventData="https://qm.qq.com/q/mTdePIDrH2" Type="Clickable" />
+            <local:MyListItem Margin="-5,2,-5,0"
+                        Logo="https://github.com/favicon.ico"
+                        Title="GitHub" Info="PCL 主页源码——支持联网自动更新"
+                        EventType="打开网页" EventData="https://github.com/SARICE233/PCL-Launcher-Home-Page-Personalization-Demo-File" Type="Clickable" />
+
+            <TextBlock TextWrapping="Wrap" Margin="0,14,0,0" HorizontalAlignment="Center"
+                       FontSize="10" Foreground="{DynamicResource ColorBrush2}"
+                       Text="v2.0.0  ·  鄂ICP备2024080321号-3  ·  © WTU-MC Community" />
+        </StackPanel>
+    </local:MyCard>
+
+    <!-- 版本校验哈希 — PCL 用于检测远程更新，请勿删除 -->
+    <TextBlock x:Name="FileHash" Visibility="Collapsed"
+               Text="wtumc-v2.0.0-github-auto-update" />
+

@@ -74,12 +74,11 @@
                             ToolTip="通过 URL Scheme 唤起本机已安装的基岩版 Minecraft" />
             </StackPanel>
 
-            <!-- 第三行：今日人品 → 弹出窗口展示（PCL 无原生随机，此处为趣味弹窗） -->
+            <!-- 第三行：今日人品 → PCL 原生功能，随机生成每日人品值 -->
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
-                <local:MyButton Width="240" Height="38"
-                            Text="🎲 今日人品" EventType="弹出窗口"
-                            EventData="今日人品|🤔 嘶……网络卡了，人品暂时测不出来。&#xA;&#xA;💡 要不你先去论坛发个帖攒攒人品？&#xA;   → https://wtumc.fun/forum"
-                            ToolTip="看看今天运气如何（开玩笑的）" />
+                <local:MyButton Width="240" Height="38" ColorType="Highlight"
+                            Text="🎲 今日人品" EventType="今日人品"
+                            ToolTip="测测今天运气如何！" />
             </StackPanel>
 
             <!-- 第四行：快捷目录 -->

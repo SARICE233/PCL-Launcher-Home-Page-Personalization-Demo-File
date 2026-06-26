@@ -19,32 +19,16 @@
                        FontSize="11" Foreground="{DynamicResource ColorBrush3}"
                        Text="在指尖上织就世界，在虚拟中纵横经纬" />
 
-            <!-- 主服务器按钮行 -->
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
-                <local:MyButton Margin="0,0,10,0" Width="155" Height="38" ColorType="Highlight"
-                            Text="🎮 加入 (Fabric)" EventType="启动游戏"
-                            EventData="1.21.1-Fabric|mc.wtumc.fun"
-                            ToolTip="使用 1.21.1-Fabric 直连服务器" />
-                <local:MyButton Margin="0,0,10,0" Width="155" Height="38"
-                            Text="⚙ 加入 (Forge)" EventType="启动游戏"
-                            EventData="1.21.1-Forge|mc.wtumc.fun"
-                            ToolTip="使用 1.21.1-Forge 直连服务器" />
-                <local:MyButton Width="155" Height="38"
-                            Text="📋 复制地址" EventType="复制文本"
+            <!-- 主服务器 — 点击复制 IP，每人版本不同，手动粘贴加入最稳妥 -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,8">
+                <local:MyButton Width="220" Height="38" ColorType="Highlight"
+                            Text="📋 复制服务器地址" EventType="复制文本"
                             EventData="mc.wtumc.fun"
-                            ToolTip="复制服务器 IP 到剪贴板" />
+                            ToolTip="复制 IP 到剪贴板，在 PCL 主界面粘贴即可加入" />
             </StackPanel>
 
-            <!-- 服务器地址 — 原版纯净服 -->
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <local:MyTextButton Margin="0,0,0,0" HorizontalAlignment="Center"
-                            Text="服务器地址：mc.wtumc.fun（点击复制）" EventType="复制文本"
-                            EventData="mc.wtumc.fun"
-                            ToolTip="点击复制服务器地址" />
-            </StackPanel>
-
-            <local:MyHint Margin="0,12,0,0" Theme="Blue"
-                        Text="服务器状态、在线人数、版本信息可在官网 https://wtumc.fun 实时查看" />
+            <local:MyHint Margin="0,0,0,0" Theme="Blue"
+                        Text="💡 复制地址后，回到 PCL 主页面粘贴到服务器地址栏即可。由于每个人的版本不同，无法提供通用的一键启动。" />
         </StackPanel>
     </local:MyCard>
 

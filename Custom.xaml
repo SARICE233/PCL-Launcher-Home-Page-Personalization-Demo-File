@@ -19,16 +19,12 @@
                        FontSize="11" Foreground="{DynamicResource ColorBrush3}"
                        Text="在指尖上织就世界，在虚拟中纵横经纬" />
 
-            <!-- 主服务器按钮行 -->
+            <!-- 主服务器按钮行 — 模糊匹配本地 1.21.1 任意 Loader -->
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
-                <local:MyButton Margin="0,0,10,0" Width="155" Height="38" ColorType="Highlight"
-                            Text="🎮 加入 (Fabric)" EventType="启动游戏"
-                            EventData="1.21.1-Fabric|mc.wtumc.fun"
-                            ToolTip="使用本地 1.21.1-Fabric 直连服务器" />
-                <local:MyButton Margin="0,0,10,0" Width="155" Height="38"
-                            Text="⚙ 加入 (Forge)" EventType="启动游戏"
-                            EventData="1.21.1-Forge|mc.wtumc.fun"
-                            ToolTip="使用本地 1.21.1-Forge 直连服务器" />
+                <local:MyButton Margin="0,0,12,0" Width="200" Height="38" ColorType="Highlight"
+                            Text="🎮 加入服务器" EventType="启动游戏"
+                            EventData="1.21.11|mc.wtumc.fun"
+                            ToolTip="模糊匹配本地 1.21.11，直连服务器" />
                 <local:MyButton Width="155" Height="38"
                             Text="📋 复制地址" EventType="复制文本"
                             EventData="mc.wtumc.fun"

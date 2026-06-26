@@ -254,3 +254,25 @@
     <TextBlock x:Name="FileHash" Visibility="Collapsed"
                Text="wtumc-v2.0.0-github-auto-update" />
 
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- 图标预加载兜底 — URL 加载失败时静默回退到 PCL 内置方块，避免弹窗报错 -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <StackPanel Visibility="Collapsed">
+        <local:MyImage Height="1" Width="1" Source="https://www.mcmod.cn/favicon.ico"
+                   FallbackSource="pack://application:,,,/images/Blocks/CommandBlock.png" />
+        <local:MyImage Height="1" Width="1" Source="https://zh.minecraft.wiki/favicon.ico"
+                   FallbackSource="pack://application:,,,/images/Blocks/Grass.png" />
+        <local:MyImage Height="1" Width="1" Source="https://www.curseforge.com/favicon.ico"
+                   FallbackSource="pack://application:,,,/images/Blocks/Anvil.png" />
+        <local:MyImage Height="1" Width="1" Source="https://modrinth.com/favicon.ico"
+                   FallbackSource="pack://application:,,,/images/Blocks/Egg.png" />
+        <local:MyImage Height="1" Width="1" Source="https://www.mcbbs.net/favicon.ico"
+                   FallbackSource="pack://application:,,,/images/Blocks/Cobblestone.png" />
+        <local:MyImage Height="1" Width="1" Source="https://wtumc.fun/icon.svg"
+                   FallbackSource="pack://application:,,,/images/Blocks/GoldBlock.png" />
+        <local:MyImage Height="1" Width="1" Source="https://www.qq.com/favicon.ico"
+                   FallbackSource="pack://application:,,,/images/Blocks/Fabric.png" />
+        <local:MyImage Height="1" Width="1" Source="https://github.com/favicon.ico"
+                   FallbackSource="pack://application:,,,/images/Blocks/RedstoneLampOn.png" />
+    </StackPanel>
+

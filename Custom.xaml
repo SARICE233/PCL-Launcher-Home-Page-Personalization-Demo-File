@@ -23,8 +23,8 @@
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
                 <local:MyButton Margin="0,0,12,0" Width="200" Height="38" ColorType="Highlight"
                             Text="🎮 加入服务器" EventType="启动游戏"
-                            EventData="1.21.11|mc.wtumc.fun"
-                            ToolTip="模糊匹配本地 1.21.11，直连服务器" />
+                            EventData="|mc.wtumc.fun"
+                            ToolTip="使用当前选择的版本直连服务器" />
                 <local:MyButton Width="155" Height="38"
                             Text="📋 复制地址" EventType="复制文本"
                             EventData="mc.wtumc.fun"

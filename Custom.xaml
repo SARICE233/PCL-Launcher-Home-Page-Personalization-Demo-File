@@ -155,23 +155,23 @@
     <local:MyCard Title="常用工具" Margin="0,0,0,12" CanSwap="True" IsSwapped="True">
         <StackPanel Margin="25,30,23,15">
             <local:MyListItem Margin="-5,2,-5,8"
-                        Logo="https://www.mcmod.cn/favicon.ico"
+                        Logo="pack://application:,,,/images/Blocks/CommandBlock.png"
                         Title="MC 百科" Info="查合成表、生物图鉴、模组资料——生存必备"
                         EventType="打开网页" EventData="https://www.mcmod.cn/" Type="Clickable" />
             <local:MyListItem Margin="-5,2,-5,8"
-                        Logo="https://zh.minecraft.wiki/favicon.ico"
+                        Logo="pack://application:,,,/images/Blocks/Grass.png"
                         Title="Minecraft Wiki" Info="最权威的 Minecraft 中文维基"
                         EventType="打开网页" EventData="https://zh.minecraft.wiki/" Type="Clickable" />
             <local:MyListItem Margin="-5,2,-5,8"
-                        Logo="https://www.curseforge.com/favicon.ico"
+                        Logo="https://cdn.simpleicons.org/curseforge"
                         Title="CurseForge" Info="最大的 Minecraft 模组与整合包平台"
                         EventType="打开网页" EventData="https://www.curseforge.com/minecraft" Type="Clickable" />
             <local:MyListItem Margin="-5,2,-5,8"
-                        Logo="https://modrinth.com/favicon.ico"
+                        Logo="https://cdn.simpleicons.org/modrinth"
                         Title="Modrinth" Info="轻量开源模组平台，下载速度飞快"
                         EventType="打开网页" EventData="https://modrinth.com/" Type="Clickable" />
             <local:MyListItem Margin="-5,2,-5,0"
-                        Logo="https://www.mcbbs.net/favicon.ico"
+                        Logo="pack://application:,,,/images/Blocks/GoldBlock.png"
                         Title="MCBBS 纪念版" Info="中文 Minecraft 社区——教程、资源、问答"
                         EventType="打开网页" EventData="https://www.mcbbs.net/" Type="Clickable" />
         </StackPanel>
@@ -236,11 +236,11 @@
                         Title="社区官网" Info="访问 WTU-MC 官方网站"
                         EventType="打开网页" EventData="https://wtumc.fun" Type="Clickable" />
             <local:MyListItem Margin="-5,2,-5,6"
-                        Logo="https://www.qq.com/favicon.ico"
+                        Logo="https://cdn.simpleicons.org/tencentqq"
                         Title="QQ 群" Info="加入纺大 MC 社区群聊"
                         EventType="打开网页" EventData="https://qm.qq.com/q/mTdePIDrH2" Type="Clickable" />
             <local:MyListItem Margin="-5,2,-5,0"
-                        Logo="https://github.com/favicon.ico"
+                        Logo="https://cdn.simpleicons.org/github"
                         Title="GitHub" Info="PCL 主页源码——支持联网自动更新"
                         EventType="打开网页" EventData="https://github.com/SARICE233/PCL-Launcher-Home-Page-Personalization-Demo-File" Type="Clickable" />
 
@@ -258,21 +258,15 @@
     <!-- 图标预加载兜底 — URL 加载失败时静默回退到 PCL 内置方块，避免弹窗报错 -->
     <!-- ═══════════════════════════════════════════════════════ -->
     <StackPanel Visibility="Collapsed">
-        <local:MyImage Height="1" Width="1" Source="https://www.mcmod.cn/favicon.ico"
-                   FallbackSource="pack://application:,,,/images/Blocks/CommandBlock.png" />
-        <local:MyImage Height="1" Width="1" Source="https://zh.minecraft.wiki/favicon.ico"
-                   FallbackSource="pack://application:,,,/images/Blocks/Grass.png" />
-        <local:MyImage Height="1" Width="1" Source="https://www.curseforge.com/favicon.ico"
+        <local:MyImage Height="1" Width="1" Source="https://cdn.simpleicons.org/curseforge"
                    FallbackSource="pack://application:,,,/images/Blocks/Anvil.png" />
-        <local:MyImage Height="1" Width="1" Source="https://modrinth.com/favicon.ico"
+        <local:MyImage Height="1" Width="1" Source="https://cdn.simpleicons.org/modrinth"
                    FallbackSource="pack://application:,,,/images/Blocks/Egg.png" />
-        <local:MyImage Height="1" Width="1" Source="https://www.mcbbs.net/favicon.ico"
-                   FallbackSource="pack://application:,,,/images/Blocks/Cobblestone.png" />
         <local:MyImage Height="1" Width="1" Source="https://wtumc.fun/icon.svg"
                    FallbackSource="pack://application:,,,/images/Blocks/GoldBlock.png" />
-        <local:MyImage Height="1" Width="1" Source="https://www.qq.com/favicon.ico"
+        <local:MyImage Height="1" Width="1" Source="https://cdn.simpleicons.org/tencentqq"
                    FallbackSource="pack://application:,,,/images/Blocks/Fabric.png" />
-        <local:MyImage Height="1" Width="1" Source="https://github.com/favicon.ico"
+        <local:MyImage Height="1" Width="1" Source="https://cdn.simpleicons.org/github"
                    FallbackSource="pack://application:,,,/images/Blocks/RedstoneLampOn.png" />
     </StackPanel>
 

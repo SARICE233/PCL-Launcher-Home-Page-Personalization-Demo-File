@@ -65,27 +65,7 @@
                             ToolTip="测测今天运气如何！" />
             </StackPanel>
 
-            <!-- 第四行：快捷目录 -->
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,10">
-                <local:MyButton Margin="0,0,10,0" Width="115" Height="33"
-                            Text="📁 .minecraft" EventType="打开文件"
-                            EventData="explorer.exe|.minecraft"
-                            ToolTip="打开 .minecraft 文件夹" />
-                <local:MyButton Margin="0,0,10,0" Width="115" Height="33"
-                            Text="📂 versions" EventType="打开文件"
-                            EventData="explorer.exe|.minecraft\versions"
-                            ToolTip="打开版本文件夹" />
-                <local:MyButton Margin="0,0,10,0" Width="115" Height="33"
-                            Text="📦 mods" EventType="打开文件"
-                            EventData="explorer.exe|.minecraft\mods"
-                            ToolTip="打开 Mod 文件夹" />
-                <local:MyButton Width="115" Height="33"
-                            Text="🎯 saves" EventType="打开文件"
-                            EventData="explorer.exe|.minecraft\saves"
-                            ToolTip="打开存档文件夹" />
-            </StackPanel>
-
-            <!-- 第五行：帮助入口 -->
+            <!-- 第四行：帮助入口 -->
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <local:MyTextButton Margin="0,0,0,0" HorizontalAlignment="Center"
                             Text="📖 PCL 帮助文档" EventType="打开帮助"
